@@ -1,23 +1,28 @@
+
 {
-  "name": "richmedia-builder",
+  "name": "rich-media-builder",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "lucide-react": "^0.563.0",
-    "jszip": "3.10.1"
+    "jszip": "^3.10.1"
   },
   "devDependencies": {
-    "@types/node": "^22.14.0",
-    "@vitejs/plugin-react": "^5.0.0",
-    "typescript": "~5.8.2",
-    "vite": "^6.2.0"
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "typescript": "^5.0.0",
+    "vite": "^6.0.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2"
   }
 }
