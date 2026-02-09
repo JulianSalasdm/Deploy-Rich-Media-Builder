@@ -116,10 +116,10 @@ const RightPanel: React.FC<RightPanelProps> = ({
   const AlignmentButton = ({ pos, label }: { pos: Parameters<typeof alignPreset>[0], label: string }) => (
       <button 
         onClick={() => alignPreset(pos)} 
-        className={`p-2 bg-gray-800 hover:bg-gray-700 rounded text-gray-400 flex items-center justify-center transition-all ${selectedElement?.lockAxis === getLockType(pos) ? 'ring-1 ring-[#9500cb] text-white bg-gray-700' : ''}`}
+        className={`p-1.5 bg-gray-800 hover:bg-gray-700 rounded text-gray-400 flex items-center justify-center transition-all ${selectedElement?.lockAxis === getLockType(pos) ? 'ring-1 ring-[#9500cb] text-white bg-gray-700' : ''}`}
         title={label}
       >
-        <div className={`w-2 h-2 rounded-sm border border-current ${pos.includes('c') || pos.includes('m') ? 'bg-current' : ''}`}></div>
+        <div className={`w-1.5 h-1.5 rounded-sm border border-current ${pos.includes('c') || pos.includes('m') ? 'bg-current' : ''}`}></div>
       </button>
   );
 
@@ -204,8 +204,8 @@ const RightPanel: React.FC<RightPanelProps> = ({
               {/* Alignment Presets & Fit to Canvas */}
               <div className="pt-2 border-t border-gray-800">
                 <label className="text-[10px] text-gray-500 uppercase font-bold mb-2 block">Alignment & Lock</label>
-                <div className="flex flex-col items-center gap-3">
-                    <div className="grid grid-cols-3 gap-1.5 w-full max-w-[120px] mx-auto">
+                <div className="flex items-center gap-3">
+                    <div className="grid grid-cols-3 gap-1 w-24 flex-none">
                         <AlignmentButton pos="tl" label="Top Left" />
                         <AlignmentButton pos="tc" label="Top Center (Lock X)" />
                         <AlignmentButton pos="tr" label="Top Right" />
@@ -218,10 +218,11 @@ const RightPanel: React.FC<RightPanelProps> = ({
                     </div>
                     <button 
                         onClick={fitToCanvas}
-                        className="w-full max-w-[120px] py-2 bg-gray-800 hover:bg-[#9500cb] text-gray-300 hover:text-white rounded text-[10px] font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all shadow-lg"
+                        className="flex-1 py-4 bg-gray-800 hover:bg-[#9500cb] text-gray-300 hover:text-white rounded text-[9px] font-bold uppercase tracking-wider flex flex-col items-center justify-center gap-1 transition-all border border-gray-700"
                         title="Fit to Canvas Size"
                     >
-                        <Icons.Maximize size={12} /> Fit Canvas
+                        <Icons.Maximize size={16} />
+                        <span>Fit Canvas</span>
                     </button>
                 </div>
                 
