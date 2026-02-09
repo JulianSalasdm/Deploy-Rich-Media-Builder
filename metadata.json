@@ -1,0 +1,5 @@
+{
+  "name": "RichMedia Builder",
+  "description": "A drag-and-drop rich media builder allowing custom CSS/JS, layer management, and element animation.",
+  "requestFramePermissions": []
+}
